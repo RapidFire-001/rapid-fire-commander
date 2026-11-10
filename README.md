@@ -1,6 +1,6 @@
 # Rapid Fire Commander
 
-Wired dashboard and OneROM bench utility for the Guition JC4880P443C_I_W/Y 4.3-inch ESP32-P4 display. The Windows kit includes Commander v0.13, Espressif esptool and a guided flash launcher.
+Wired dashboard and OneROM tuning utility for the Guition JC4880P443C_I_W/Y 4.3-inch ESP32-P4 display. The Windows kit includes Commander v0.13, Espressif esptool and a guided flash launcher.
 
 The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a FAT32 microSD card. Only files that match the detected OneROM size can be selected.
 
@@ -12,4 +12,4 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 
 This repository distributes compiled Commander firmware and documentation. See the [Commander firmware licence](FIRMWARE-LICENCE.md) for copyright and permitted use. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
 
-Use TunerPro RT through Commander’s bridge for live calibration edits with compatible OneROM hardware. Use the bench procedure for SD tune swaps, full BIN uploads, and new board combinations. Keep OneROM disconnected from the ECU and verify the readback before reconnecting it. See the [TunerPro bridge and Bench Tune Selector instructions](HELP.md#tunerpro-bridge).
+Use TunerPro RT through Commander’s bridge for live calibration edits with compatible OneROM hardware. For SD tune swaps and full BIN uploads, turn off the engine, disconnect OneROM from the ECU, and verify the readback before reconnecting it. See the [TunerPro bridge and SD Tune Selector instructions](HELP.md#tunerpro-bridge).
