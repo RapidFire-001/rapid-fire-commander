@@ -29,7 +29,7 @@ With a compatible OneROM setup and emulation enabled, TunerPro RT can send live 
 
 ### SD Tune Selector
 
-The SD Tune Selector loads the selected BIN image in blocks. Even when two BINs share the same ECU program code, an ECU reading during the transfer can see a mix of old and new calibration data. For SD tune swaps and full BIN uploads, OneROM can stay connected to the ECU. Keep the engine off throughout the upload and verify the readback before starting it.
+The SD Tune Selector loads the selected BIN image in blocks. Even when two BINs share the same ECU program code, an ECU reading during the transfer can see a mix of old and new calibration data. For SD tune swaps and full BIN uploads, OneROM can stay installed in the vehicle’s MemCal. Keep the engine off throughout the upload and verify the readback before starting it.
 
 | Fire model | Supported ROM size |
 |---|---|
