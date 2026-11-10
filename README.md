@@ -12,4 +12,4 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 
 This repository distributes compiled Commander firmware and documentation. See the [Commander firmware licence](FIRMWARE-LICENCE.md) for copyright and permitted use. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
 
-Treat tune writes and new board combinations as bench workflows and verify the result with OneROM disconnected from the ECU.
+Use TunerPro RT through Commander’s bridge for live calibration edits with compatible OneROM hardware. Use the bench procedure for SD tune swaps, full BIN uploads, and new board combinations. Keep OneROM disconnected from the ECU and verify the readback before reconnecting it. See the [TunerPro bridge and Bench Tune Selector instructions](HELP.md#tunerpro-bridge).
