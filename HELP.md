@@ -4,6 +4,13 @@ The illustrations are recreated from the firmware layout. Status values and exam
 
 ![OneROM mode chooser with TunerPro Bridge, SD Tune Selector and SD Card Access](onerom-modes.png)
 
+## Program and verify OneROM in the app first
+
+1. Keep OneROM disconnected from the ECU. Connect it directly to your computer and open the OneROM app.
+2. Select your OneROM board and the matching **NORMAL DT** profile for the intended ROM size. Program the tune BIN you want to start with.
+3. Read the programmed ROM back in the app and confirm that it matches the intended BIN byte for byte. If you plan to use the SD Tune Selector, put a copy of that verified BIN at the root of the FAT32 microSD card.
+4. Once the readback matches, disconnect OneROM from the computer and plug it into Commander's **USB2** port. Open the Commander mode you want to use and confirm that it detects the expected board and ROM size.
+
 ## OneROM modes
 
 | Mode | Use |
