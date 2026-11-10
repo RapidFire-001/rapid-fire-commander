@@ -4,7 +4,7 @@ Wired dashboard and OneROM bench utility for the Guition JC4880P443C_I_W/Y 4.3-i
 
 The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a FAT32 microSD card. Only files that match the detected OneROM size can be selected.
 
-> **Microsoft Edge download notice:** Edge may show a warning or block a download from this repository. If the page or download is unavailable in Edge, you can also open the official GitHub page in Firefox or Chrome. If your browser or antivirus flags a file as malware, please report the exact warning and the file name or release version so I can investigate.
+> **Microsoft Edge download notice.** SmartScreen may warn that a file isn’t commonly downloaded when it has limited download history. If Edge or your antivirus shows a malware warning, please send the exact message and the file name or release version so I can investigate. If the GitHub page is unavailable in Edge, you can also view it in Firefox or Chrome. See [Microsoft’s SmartScreen guidance](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation).
 
 1. Download the Windows kit from [Releases](https://github.com/RapidFire-001/rapid-fire-commander/releases).
 2. Follow the [Windows flashing guide](WINDOWS.md) for the board check, backup, bootloader sequence and first boot.
