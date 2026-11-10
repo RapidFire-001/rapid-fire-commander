@@ -23,9 +23,13 @@ The illustrations are recreated from the firmware layout. Status values and exam
 
 Connect the laptop to USB3 and the OneROM to USB2. Open **OneROM → TunerPro bridge**. Wait for the board and size to be detected, then find the new COM port in Windows and select it in TunerPro RT for Ostrich emulation. Start with a readback before attempting a write. Some OneROM profiles expose an optional second UART port. The bridge transfers serial data and does not provide GT telemetry to TunerPro.
 
+With a compatible OneROM setup and emulation enabled, TunerPro RT can send live calibration edits while the engine is running. TunerPro RT sends the editor update through Commander's bridge, and OneROM serves the updated data to the ECU. Perform live edits while the vehicle is stationary. See the [TunerPro RT emulation guide](https://www.tunerpro.net/WebHelp/source/emulation.htm).
+
 ![TunerPro Bridge waiting for OneROM on USB2](tunerpro-bridge.png)
 
 ### Bench Tune Selector
+
+The SD Tune Selector loads the selected BIN image in blocks. Even when two BINs share the same ECU program code, an ECU reading during the transfer can see a mix of old and new calibration data. For SD tune swaps and full BIN uploads, keep the engine off and OneROM disconnected from the ECU, then verify the readback before reconnecting it.
 
 | Fire model | Supported ROM size |
 |---|---|
