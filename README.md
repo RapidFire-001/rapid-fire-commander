@@ -8,6 +8,6 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 2. Follow the [Windows flashing guide](WINDOWS.md) for the board check, backup, bootloader sequence and first boot.
 3. Use the [menu and feature guide](HELP.md) for OneROM, SD cards, TunerPro, wideband and display settings.
 
-This repository distributes compiled Commander firmware and documentation. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
+This repository distributes compiled Commander firmware and documentation. See the [Commander firmware licence](FIRMWARE-LICENCE.md) for copyright and permitted use. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
 
 The owner confirmed the v0.11 display boots on their P4. Treat tune writes and new board combinations as bench workflows and verify the result with OneROM disconnected from the ECU.
