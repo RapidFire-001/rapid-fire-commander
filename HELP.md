@@ -16,16 +16,30 @@ The illustrations are recreated from the firmware layout. Status values and exam
 | Mode | Use |
 |---|---|
 | TunerPro bridge | Laptop on USB3, OneROM on USB2. Select the P4’s Ostrich COM port in TunerPro RT for emulation. |
+| TunerPro + GT Pro | Separate Windows COM ports for OneROM emulation and read-only GT Pro ADX logging. |
 | SD tune selector | Browse and load a matching BIN from the FAT32 microSD card onto OneROM with the engine off. |
 | SD Card Access | Expose the P4’s SD card as a removable drive through USB3. The tune selector and serial bridge pause while this mode owns the card. |
 
 ### TunerPro bridge
 
-Connect the laptop to USB3 and the OneROM to USB2. Open **OneROM → TunerPro bridge**. Wait for the board and size to be detected, then find the new COM port in Windows and select it in TunerPro RT for Ostrich emulation. Start with a readback before attempting a write. Some OneROM profiles expose an optional second UART port. The bridge transfers serial data and does not provide GT telemetry to TunerPro.
+Connect the laptop to USB3 and the OneROM to USB2. Open **OneROM → TunerPro bridge**. Wait for the board and size to be detected, then find the new COM port in Windows and select it in TunerPro RT for Ostrich emulation. Start with a readback before attempting a write. Some OneROM profiles expose an optional second UART port. For GT Pro telemetry, choose **TunerPro + GT Pro**.
 
 With a compatible OneROM setup and emulation enabled, TunerPro RT can send live calibration edits while the engine is running. TunerPro RT sends the editor update through Commander's bridge, and OneROM serves the updated data to the ECU. Perform live edits while the vehicle is stationary. See the [TunerPro RT emulation guide](https://www.tunerpro.net/WebHelp/source/emulation.htm).
 
 ![TunerPro Bridge waiting for OneROM on USB2](tunerpro-bridge.png)
+
+### TunerPro + GT Pro ADX logging
+
+Commander v0.13 passes read-only ALDL requests and replies between TunerPro RT and the GT Pro. Load the ADX in TunerPro RT so it can decode the ECU replies.
+
+1. Connect OneROM to **USB2** and the Windows laptop to **USB3**. On Commander, choose **OneROM → TunerPro + GT Pro**.
+2. In **Settings → OBDX devices**, select the GT Pro and tap **Connect selected**. Wait for **GT Pro ALDL acquisition ready** on the OneROM screen.
+3. In TunerPro RT, use the **OneROM emulation** COM port for Ostrich. Under **Preferences → Data Acq./Emulation**, choose **Standard Serial** and the separate **GT Pro ALDL acquisition** COM port. Windows assigns the port numbers.
+4. Stop acquisition if it is running. Choose **Acquisition → Load Definition File**, load the ADX for your ECU and calibration, then start acquisition.
+
+After a verified SD tune load, Commander can identify OSE $11P V104 or $12P V112. Use that recommendation to choose the matching ADX variant in TunerPro RT. For a factory or unknown profile, choose the definition for the installed ECU and calibration.
+
+Software emulation passed 35 monitor polls across 27 Holden ADX definitions, including OSE $11P, OSE $12P, VS Enhanced and the stock VS V6 $51 profile. The owner also reported validating GT Pro Bluetooth and Windows COM port detection on the physical P4. See the [Commander v0.13 release notes](https://github.com/RapidFire-001/rapid-fire-commander/releases/tag/v0.13).
 
 ### SD Tune Selector
 
@@ -61,7 +75,7 @@ Choose **SD Card Access** and connect Windows to USB3. Copy files to the card in
 - **Dashboard** and **Engine** show speed, RPM, intake air, coolant, spark advance and battery fields. Unavailable readings display dashes.
 - **Settings → Brightness** adjusts the backlight from 10% to 100% and saves on release.
 - **Settings → Demo mode** supplies simulated gauge values, marked by a **DEMO** badge. It starts off after a restart.
-- **Settings → OBDX devices** opens Bluetooth discovery, connection controls and diagnostics. This release does not implement live ECU gauges or ADX telemetry passthrough.
+- **Settings → OBDX devices** opens Bluetooth discovery, connection controls and diagnostics. Use **TunerPro + GT Pro** to log ECU data in TunerPro RT.
 - **Wideband → Source** chooses Innovate LM-2 or AEM 30-0300. See [wideband setup](WIDEBAND.md) for wiring and signal levels. Use one source at a time.
 
 ![Settings with Demo mode and brightness](settings.png)
