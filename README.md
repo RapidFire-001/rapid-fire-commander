@@ -15,3 +15,7 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 This repository distributes compiled Commander firmware and documentation. See the [Commander firmware licence](FIRMWARE-LICENCE.md) for copyright and permitted use. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
 
 Use TunerPro RT through Commander’s bridge for live calibration edits with compatible OneROM hardware. OneROM can stay installed in the vehicle’s MemCal for SD tune swaps and full BIN uploads. Keep the engine off and verify the readback before starting it. See the [TunerPro bridge and SD Tune Selector instructions](HELP.md#tunerpro-bridge).
+
+## Support
+
+For help with this software, email [Rapid Fire Software Support](mailto:support@rapidfiresoftware.net). Include the software version, what you were trying to do, and any error message you saw.
