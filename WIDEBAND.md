@@ -2,6 +2,10 @@
 
 Commander receives a digital wideband signal on **P4 UART2 RX, GPIO32**. Use one supported source at a time. The screen shows AFR and lambda when valid data arrives.
 
+## Find the wideband input on the display board
+
+On the Guition **JC4880P443C_I_W** schematic, **JP1** is the 2×13 header labeled **Expand IO**. Look for **GPIO32** at JP1 pin 19 and **GND** at pin 5. The schematic shows pin 20 beside pin 19 as **C6_U0RXD**. That pin belongs to the ESP32-C6. The separate RS-485 connector uses different signals. Match the board model and pin-1 orientation to the drawing before wiring. [Guition Expand IO schematic](https://github.com/ultramcu/guition-jc4880p443c-i-w/blob/master/schematic/03-expand-io_usb-fs-hs_lcd-backlight.webp)
+
 ## Required serial interface
 
 Use a **true RS-232 to 3.3 V UART receiver**, for example a MAX3232 breakout designed for 3.3 V operation and powered at 3.3 V. Check the breakout pinout for its RS-232 receive input and its 3.3 V logic receive output. Keep raw RS-232 voltages, 5 V logic, vehicle power, CAN and analog outputs away from the P4 GPIO. A USB-to-TTL cable alone does not convert RS-232 signal levels. [MAX3232 reference](https://www.ti.com/product/MAX3232)
