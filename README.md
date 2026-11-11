@@ -1,6 +1,6 @@
 # Rapid Fire Commander
 
-[Rapid Fire Commander Wi-Fi setup and bench results](WIFI.md)
+[Rapid Fire Commander Wi-Fi setup and bench results](https://github.com/RapidFire-001/rapid-fire-commander-wifi)
 
 [Download the printable Commander booklet (PDF)](Rapid-Fire-Commander-Booklet.pdf). The numbered A5 pages are designed to fold from A4 in your PDF reader’s Booklet print mode.
 
