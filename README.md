@@ -12,6 +12,8 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 
 > **Microsoft Edge download notice.** SmartScreen may warn that a file isn’t commonly downloaded when it has limited download history. If Edge or your antivirus shows a malware warning, please send the exact message and the file name or release version so I can investigate. If the GitHub page is unavailable in Edge, you can also view it in Firefox or Chrome. See [Microsoft’s SmartScreen guidance](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation).
 
+For a Delco 808 wired directly to OneROM, select **ALDL 808 DT** in the Rapid Fire OneROM app. If you use GT Pro for logging, select its separate acquisition COM port and the matching ADX in TunerPro RT. See the [Commander help guide](HELP.md) for setup.
+
 1. Download the Windows kit from [the latest release](https://github.com/RapidFire-001/rapid-fire-commander/releases/latest).
 2. Follow the [Windows flashing guide](WINDOWS.md) for the board check, backup, bootloader sequence and first boot.
 3. Use the [menu and feature guide](HELP.md) for OneROM, SD cards, TunerPro, wideband and display settings.
