@@ -14,6 +14,11 @@ The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a F
 
 For a Delco 808 wired directly to OneROM, select **ALDL 808 DT** in the Rapid Fire OneROM app. If you use GT Pro for logging, select its separate acquisition COM port and the matching ADX in TunerPro RT. See the [Commander help guide](HELP.md) for setup.
 
+| OneROM firmware mode | Use |
+| --- | --- |
+| **NORMAL DT** | Honda standard Ostrich with Display Trace. The optional UART runs at 38,400 baud. |
+| **ALDL 808 DT** | Delco 808 wired directly to OneROM for ALDL at 8,192 baud, with default signal polarity. |
+
 1. Download the Windows kit from [the latest release](https://github.com/RapidFire-001/rapid-fire-commander/releases/latest).
 2. Follow the [Windows flashing guide](WINDOWS.md) for the board check, backup, bootloader sequence and first boot.
 3. Use the [menu and feature guide](HELP.md) for OneROM, SD cards, TunerPro, wideband and display settings.
