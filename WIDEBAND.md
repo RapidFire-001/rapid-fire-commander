@@ -10,6 +10,19 @@ On the Guition **JC4880P443C_I_W** schematic, **JP1** is the 2×13 header labele
 
 Use a **true RS-232 to 3.3 V UART receiver**, for example a MAX3232 breakout designed for 3.3 V operation and powered at 3.3 V. Check the breakout pinout for its RS-232 receive input and its 3.3 V logic receive output. Keep raw RS-232 voltages, 5 V logic, vehicle power, CAN and analog outputs away from the P4 GPIO. A USB-to-TTL cable alone does not convert RS-232 signal levels. [MAX3232 reference](https://www.ti.com/product/MAX3232)
 
+```mermaid
+flowchart LR
+    WB["Wideband controller"]
+    RX["RS-232 to 3.3 V UART receiver<br/>e.g. MAX3232 powered at 3.3 V"]
+    JP["Commander JP1 · Expand IO<br/>26-pin header"]
+    RS["Separate RS-485 connector<br/>Unused for wideband"]
+
+    WB -->|"RS-232 TX → R1IN"| RX
+    WB ---|"Serial signal ground"| RX
+    RX -->|"R1OUT → pin 19 (GPIO32)"| JP
+    RX ---|"Logic ground → pin 5 (GND)"| JP
+```
+
 | From | To |
 |---|---|
 | Wideband RS-232 TX | Receiver RS-232 input, often labeled R1IN |
