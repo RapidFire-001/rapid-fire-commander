@@ -1,5 +1,7 @@
 # Rapid Fire Commander
 
+[Download the printable Commander booklet (PDF)](Rapid-Fire-Commander-Booklet.pdf). The numbered A5 pages are designed to fold from A4 in your PDF reader’s Booklet print mode.
+
 Rapid Fire Commander is a wired ESP32-P4 dashboard and OneROM tuning utility with read-only Holden ALDL logging through TunerPro RT.
 
 Wired dashboard and OneROM tuning utility for the Guition JC4880P443C_I_W/Y 4.3-inch ESP32-P4 display. The Windows kit includes Commander v0.13, Espressif esptool and a guided flash launcher.
