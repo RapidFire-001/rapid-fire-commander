@@ -1,5 +1,7 @@
 # Rapid Fire Commander
 
+[Rapid Fire Commander Wi-Fi setup and bench results](WIFI.md)
+
 [Download the printable Commander booklet (PDF)](Rapid-Fire-Commander-Booklet.pdf). The numbered A5 pages are designed to fold from A4 in your PDF reader’s Booklet print mode.
 
 Rapid Fire Commander is a wired ESP32-P4 dashboard and OneROM tuning utility with read-only Holden ALDL logging through TunerPro RT.
