@@ -1,5 +1,7 @@
 # Rapid Fire Commander
 
+Rapid Fire Commander is a wired ESP32-P4 dashboard and OneROM tuning utility with read-only Holden ALDL logging through TunerPro RT.
+
 Wired dashboard and OneROM tuning utility for the Guition JC4880P443C_I_W/Y 4.3-inch ESP32-P4 display. The Windows kit includes Commander v0.13, Espressif esptool and a guided flash launcher.
 
 **TunerPro + GT Pro** mode provides separate COM ports for OneROM emulation and read-only Holden ALDL logging. Load the matching ADX in TunerPro RT. See the [ADX logging setup](HELP.md#tunerpro--gt-pro-adx-logging).
