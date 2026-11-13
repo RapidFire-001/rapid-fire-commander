@@ -16,6 +16,10 @@ The illustrations are recreated from the firmware layout. Status values and exam
 3. Read the programmed ROM back in the app and confirm that it matches the intended BIN byte for byte. If you plan to use the SD Tune Selector, put a copy of that verified BIN at the root of the FAT32 microSD card.
 4. Once the readback matches, disconnect OneROM from the computer and plug it into Commander's **USB2** port. Open the Commander mode you want to use and confirm that it detects the expected board and ROM size.
 
+## Choose a Windows connection
+
+Wired uses USB3. Wi-Fi uses the Commander network and the Windows Companion launcher. Its local endpoints are 127.0.0.1:22170 for OneROM and 127.0.0.1:22171 for GT Pro when enabled. The USB3 instructions below describe Wired. See the [Windows guide](WINDOWS.md#connect-after-flashing) before opening TunerPro.
+
 ## OneROM modes
 
 | Mode | Use |
@@ -35,7 +39,7 @@ With a compatible OneROM setup and emulation enabled, TunerPro RT can send live 
 
 ### TunerPro + GT Pro ADX logging
 
-Commander v0.13 passes read-only ALDL requests and replies between TunerPro RT and the GT Pro. Load the ADX in TunerPro RT so it can decode the ECU replies.
+Commander passes read-only ALDL requests and replies between TunerPro RT and the GT Pro. Load the ADX in TunerPro RT so it can decode the ECU replies.
 
 1. Connect OneROM to **USB2** and the Windows laptop to **USB3**. On Commander, choose **OneROM → TunerPro + GT Pro**.
 2. In **Settings → OBDX devices**, select the GT Pro and tap **Connect selected**. Wait for **GT Pro ALDL acquisition ready** on the OneROM screen.
@@ -77,7 +81,12 @@ Choose **SD Card Access** and connect Windows to USB3. Copy files to the card in
 
 ## Dashboard, Engine and Settings
 
-- **Dashboard** and **Engine** show speed, RPM, intake air, coolant, spark advance and battery fields. Unavailable readings display dashes.
+![Instrument Cluster in Demo mode](dashboard.png)
+
+- **Dashboard** shows RPM, boost, MAP, speed, gear, spark advance, knock retard, commanded AFR, wideband AFR, injector pulse width, coolant, intake and transmission temperatures, and battery voltage. Unavailable readings display dashes. A supported external wideband can feed the wideband display directly.
+- **Engine → Auto** uses the family detected after a verified SD tune load. Choose **11P** or **12P** to review the corresponding channels manually. Select the exact ADX and MAP range in TunerPro RT. The Engine selector does not decode an ADX or supply missing live readings.
+
+![Engine family selector](engine.png)
 - **Settings → Brightness** adjusts the backlight from 10% to 100% and saves on release.
 - **Settings → Demo mode** supplies simulated gauge values, marked by a **DEMO** badge. It starts off after a restart.
 - **Settings → OBDX devices** opens Bluetooth discovery, connection controls and diagnostics. Use **TunerPro + GT Pro** to log ECU data in TunerPro RT.

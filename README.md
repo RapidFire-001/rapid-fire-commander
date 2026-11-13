@@ -1,32 +1,23 @@
 # Rapid Fire Commander
 
-[Download the printable Commander booklet (PDF)](Rapid-Fire-Commander-Booklet.pdf). The numbered A5 pages are designed to fold from A4 in your PDF reader’s Booklet print mode.
+Rapid Fire Commander brings an instrument cluster, OneROM tune selection and TunerPro RT connectivity to the Guition 4.3-inch ESP32-P4 display.
 
-Rapid Fire Commander is a wired ESP32-P4 dashboard and OneROM tuning utility with read-only Holden ALDL logging through TunerPro RT.
+| Edition | Windows connection | Printable A5 guide |
+| --- | --- | --- |
+| Wired | USB3 serial bridge | [Wired booklet](Rapid-Fire-Commander-Booklet.pdf) |
+| Wi-Fi | Commander Wi-Fi and the Windows Companion launcher | [Wi-Fi booklet](https://github.com/RapidFire-001/rapid-fire-commander-wifi/blob/main/Rapid-Fire-Commander-WiFi-Booklet.pdf) |
 
-Wired dashboard and OneROM tuning utility for the Guition JC4880P443C_I_W/Y 4.3-inch ESP32-P4 display. The Windows kit includes Commander v0.13, Espressif esptool and a guided flash launcher.
+Choose the kit for your hardware on the [Releases page](https://github.com/RapidFire-001/rapid-fire-commander/releases). Check the asset names for Wired or WiFi. Older releases may only provide Wired.
 
-**TunerPro + GT Pro** mode provides separate COM ports for OneROM emulation and read-only Holden ALDL logging. Load the matching ADX in TunerPro RT. See the [ADX logging setup](HELP.md#tunerpro--gt-pro-adx-logging).
+![Instrument Cluster in Demo mode](dashboard.png)
 
-The **SD Tune Selector** supports up to **64 `.BIN` files** from the root of a FAT32 microSD card. Only files that match the detected OneROM size can be selected.
+The Dashboard groups RPM, boost, wideband AFR and knock retard around the centre, with supporting readings for MAP, gear, speed, spark, temperatures, battery, commanded AFR and injector pulse width. **Settings → Demo mode** animates the gauges and marks the screen **DEMO**. Live mode is the startup default. A dash means no valid live value is available.
 
-> **Microsoft Edge download notice.** SmartScreen may warn that a file isn’t commonly downloaded when it has limited download history. If Edge or your antivirus shows a malware warning, please send the exact message and the file name or release version so I can investigate. If the GitHub page is unavailable in Edge, you can also view it in Firefox or Chrome. See [Microsoft’s SmartScreen guidance](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation).
+The **Engine** tab offers **Auto**, **11P** and **12P**. Auto follows a supported tune family after a verified SD tune load. Choose the matching ADX variant and MAP range in TunerPro RT for ECU logging.
 
-For a Delco 808 wired directly to OneROM, select **ALDL 808 DT** in the Rapid Fire OneROM app. If you use GT Pro for logging, select its separate acquisition COM port and the matching ADX in TunerPro RT. See the [Commander help guide](HELP.md) for setup.
+- [Install or update on Windows with Espressif Flash Download Tool](WINDOWS.md)
+- [Dashboard, Engine, OneROM, SD card and TunerPro help](HELP.md)
+- [Wideband wiring and source selection](WIDEBAND.md)
+- [Firmware licence](FIRMWARE-LICENCE.md)
 
-| OneROM firmware mode | Use |
-| --- | --- |
-| **NORMAL DT** | Honda standard Ostrich with Display Trace. The optional UART runs at 38,400 baud. |
-| **ALDL 808 DT** | Delco 808 wired directly to OneROM for ALDL at 8,192 baud, with default signal polarity. |
-
-1. Download the Windows kit from [the latest release](https://github.com/RapidFire-001/rapid-fire-commander/releases/latest).
-2. Follow the [Windows flashing guide](WINDOWS.md) for the board check, backup, bootloader sequence and first boot.
-3. Use the [menu and feature guide](HELP.md) for OneROM, SD cards, TunerPro, wideband and display settings.
-
-This repository distributes compiled Commander firmware and documentation. See the [Commander firmware licence](FIRMWARE-LICENCE.md) for copyright and permitted use. The Commander project source and tune files are private. The kit includes separate notices and source for the third-party flasher.
-
-Use TunerPro RT through Commander’s bridge for live calibration edits with compatible OneROM hardware. OneROM can stay installed in the vehicle’s MemCal for SD tune swaps and full BIN uploads. Keep the engine off and verify the readback before starting it. See the [TunerPro bridge and SD Tune Selector instructions](HELP.md#tunerpro-bridge).
-
-## Support
-
-For help with this software, email [Rapid Fire Software Support](mailto:support@rapidfiresoftware.net). Include the software version, what you were trying to do, and any error message you saw.
+Print the PDF for your edition using Booklet mode on A4. For support, email [Rapid Fire Software Support](mailto:support@rapidfiresoftware.net) with your edition, version, board model and the exact error message.
